@@ -17,7 +17,7 @@ def get_info_by_ip(ip='127.0.0.1'):
             '[ZIP]': response.get('zip'),
             '[Lat]': response.get('lat'),
             '[Lon]': response.get('lon'),
-        }
+        } # make a structured dictionary
 
         for k, v in data.items():
             print(f'{k} : {v}')
@@ -31,6 +31,7 @@ def main():
     preview_text = Figlet(font='slant')
     print(preview_text.renderText('IP INFO'))
     ip = input('Please enter a target IP: ')
+
     get_info_by_ip(ip=ip)
 
 
